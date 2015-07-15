@@ -65,3 +65,8 @@ set guifont=Source\ Code\ Pro\ for\ Powerline "make sure to escape the spaces in
 let g:airline_powerline_fonts=1
 vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
+let g:airline#extensions#tabline#enabled = 1
+nnoremap <C-S-Left> :tabprevious<CR>
+nnoremap <C-S-Right> :tabnext<CR>
+nnoremap <silent> <Esc>[1;10D :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
+nnoremap <silent> <Esc>[1;10C :execute 'silent! tabmove ' . (tabpagenr()+1)<CR>
