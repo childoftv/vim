@@ -1,3 +1,4 @@
+set shell=/bin/bash
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -10,8 +11,11 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 Plugin 'terryma/vim-expand-region'
+Plugin 'bkad/CamelCaseMotion'
 " Plugin 'Lokaltog/vim-powerline'
 Plugin 'bling/vim-airline'
+Plugin 'vim-gitgutter'
+Plugin 'wincent/command-t'
 " The following are examples of different formats supported.
 
 " Keep " Plugin commands between vundle#begin/end.
@@ -70,3 +74,4 @@ nnoremap <C-S-Left> :tabprevious<CR>
 nnoremap <C-S-Right> :tabnext<CR>
 nnoremap <silent> <Esc>[1;10D :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
 nnoremap <silent> <Esc>[1;10C :execute 'silent! tabmove ' . (tabpagenr()+1)<CR>
+let mapleader=" "
