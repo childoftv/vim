@@ -16,6 +16,7 @@ Plugin 'bkad/CamelCaseMotion'
 Plugin 'bling/vim-airline'
 Plugin 'vim-gitgutter'
 Plugin 'wincent/command-t'
+Plugin 'tpope/vim-surround'
 " The following are examples of different formats supported.
 
 " Keep " Plugin commands between vundle#begin/end.
@@ -75,3 +76,11 @@ nnoremap <C-S-Right> :tabnext<CR>
 nnoremap <silent> <Esc>[1;10D :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
 nnoremap <silent> <Esc>[1;10C :execute 'silent! tabmove ' . (tabpagenr()+1)<CR>
 let mapleader=" "
+function! NumberToggle()
+  if(&relativenumber == 1)
+    set nornu
+  else
+    set rnu
+  endif
+endfunc
+nnoremap <C-n> :call NumberToggle()<cr>
