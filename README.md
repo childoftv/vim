@@ -1,6 +1,6 @@
 Installation:
 
-    git clone git@github.com:childoftv/vim.git
+    git clone git@github.com:childoftv/vim.git .vim
  
 Create symlinks:
 
