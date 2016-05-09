@@ -1,13 +1,14 @@
 Installation:
 
-    git clone git@github.com:childoftv/vim.git
+    git clone git@github.com:childoftv/vim.git ~/.vim
  
 Create symlinks:
 
-    ln -s ~/.vim/vimrc ~/.vimrc
+    ln -s ~/.vim/.vimrc ~/.vimrc
 
-Switch to the `~/.vim` directory, and fetch submodules:
+vundle:
 
     cd ~/.vim
-    git submodule init
-    git submodule update
+    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    vim
+    (within vim) :PluginInstall
