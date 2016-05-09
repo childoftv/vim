@@ -17,6 +17,7 @@ Plugin 'bling/vim-airline'
 Plugin 'vim-gitgutter'
 Plugin 'wincent/command-t'
 Plugin 'tpope/vim-surround'
+Plugin 'Chiel92/vim-autoformat'
 " The following are examples of different formats supported.
 
 " Keep " Plugin commands between vundle#begin/end.
@@ -84,3 +85,7 @@ function! NumberToggle()
   endif
 endfunc
 nnoremap <C-n> :call NumberToggle()<cr>
+inoremap jj <Esc>
+inoremap <esc> <nop>
+set gdefault
+noremap <F3> :Autoformat<CR>
