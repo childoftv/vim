@@ -18,6 +18,16 @@ Plugin 'vim-gitgutter'
 Plugin 'wincent/command-t'
 Plugin 'tpope/vim-surround'
 Plugin 'Chiel92/vim-autoformat'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
+Plugin 'SirVer/ultisnips'
+Plugin 'rking/ag.vim'
+Plugin 'jeetsukumaran/vim-buffergator'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
+
 " The following are examples of different formats supported.
 
 " Keep " Plugin commands between vundle#begin/end.
@@ -49,8 +59,8 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-" Plugin stuff after this line
-:syntax enable
-:set nu
+syntax enable
+set nu
 inoremap  <Up>     <NOP>
 inoremap  <Down>   <NOP>
 inoremap  <Left>   <NOP>
@@ -84,8 +94,40 @@ function! NumberToggle()
     set rnu
   endif
 endfunc
-nnoremap <C-n> :call NumberToggle()<cr>
+nnoremap <C-a> :call NumberToggle()<cr>
 inoremap jj <Esc>
-inoremap <esc> <nop>
 set gdefault
 noremap <F3> :Autoformat<CR>
+set timeoutlen=500 ttimeoutlen=20
+let g:netrw_liststyle=3
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
+"
+" " Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+map <C-t> :NERDTreeToggle<CR>
+noremap <SPACE> <Nop>
+let mapleader = "\<Space>"
+noremap <leader>O O<esc> 
+noremap <leader>o o<esc>
+let g:NERDTreeWinSize = 21 
+set hlsearch
+set incsearch
+" Allow backspace in insert mode
+set backspace=indent,eol,start
+set clipboard=unnamed
+set mouse=a
+set scrolloff=3
+set tabstop=2
+" Automatic commands
+if has("autocmd")
+	" Enable file type detection
+	filetype on
+	" Treat .json files as .js
+	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
+endif
+set wildmenu

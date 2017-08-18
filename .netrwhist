@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/Users/ben/code/urban-warfare/apps/mc/live_ops'
+let g:netrw_dirhist_2='/Users/ben'
+let g:netrw_dirhist_3='/Users/ben/code'
+let g:netrw_dirhist_4='/Users/ben/code/docker'
+let g:netrw_dirhist_5='/Users/ben/code'
+let g:netrw_dirhist_6='/Users/ben'
+let g:netrw_dirhist_7='/Users'
+let g:netrw_dirhist_8='/'
