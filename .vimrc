@@ -1,4 +1,4 @@
-set shell=/bin/bash
+set shell=/bin/zsh
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -20,13 +20,14 @@ Plugin 'tpope/vim-surround'
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
-Plugin 'honza/vim-snippets'
-Plugin 'SirVer/ultisnips'
+" Plugin 'garbas/vim-snipmate'
+" Plugin 'honza/vim-snippets'
+" Plugin 'SirVer/ultisnips'
 Plugin 'rking/ag.vim'
 Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
+Plugin 'Valloric/YouCompleteMe'
 
 " The following are examples of different formats supported.
 
